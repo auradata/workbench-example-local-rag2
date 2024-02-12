@@ -94,19 +94,19 @@ execution:
     class: webapp
     start_command: cd /project/code/ && PROXY_PREFIX=$PROXY_PREFIX /opt/conda/envs/ui-env/bin/python3
       -m chatui
-    health_check_command: curl -f "http://localhost:8080/"
+    health_check_command: curl -f "http://localhost:8081/"
     stop_command: pkill -f '^/opt/conda/envs/ui-env/bin/python3 -m chatui'
     user_msg: ""
     icon_url: ""
     webapp_options:
       autolaunch: true
-      port: "8080"
+      port: "8081"
       proxy:
         trim_prefix: true
-      url: http://localhost:8080/
+      url: http://localhost:8081/
   resources:
     gpu:
-      requested: 2
+      requested: 1
     sharedMemoryMB: 32000
   secrets:
   - variable: HUGGING_FACE_HUB_TOKEN
