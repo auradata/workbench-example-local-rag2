@@ -40,8 +40,6 @@ environment:
     os_distro: ubuntu
     os_distro_release: "20.04"
     schema_version: v2
-    user_info:
-      username: root
     package_managers:
     - name: conda
       binary_path: /opt/conda/bin/conda
